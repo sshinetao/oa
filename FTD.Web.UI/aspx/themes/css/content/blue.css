@@ -1,0 +1,80 @@
+@charset=utf-8;
+
+.blue-title{
+	height: 50px;
+	padding-left: 28px;
+	background:url(../../images/bg/blue-title-bg.png) repeat;
+}
+
+.blue-title .txt{
+	display: block;
+	padding-left: 20px;
+	padding-top: 17px;
+	color:#fff;
+	background: url(../../images/ico/blue-title-ico.png) no-repeat left bottom;
+}
+
+.login{
+	width:1200px;
+	padding-top:162px;
+	background:url(../../images/bg/blue-main-bg.png) no-repeat center;
+}
+
+.login .containt{
+	width:500px;
+	margin:0 auto;
+	padding:34px 0;
+	border:0;
+	border-radius: 10px 10px;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+     -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+          box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+}
+
+.logintitle{
+	width:190px;
+	margin:0 auto 30px;
+}
+
+.logintitle > span{
+	display: inline-block;
+}
+
+.logintitle .bigtxt{
+	font-size: 24px;
+	color:#b7883e;
+	margin-right: 10px;
+}
+
+.logintitle .smltxt{
+	font-size: 16px;
+	color:#c1c1c1;
+}
+
+.loginmain{
+	background-color:#1f79ae;
+}
+
+.iptline{
+	background-color: #ecf5fa;
+}
+
+.formipt{
+	background-color: #ecf5fa;
+}
+
+.iptplaceholder{
+	color:#5a859c;
+}
+
+.butonline > a{
+	color:#5a859c;
+}
+
+.footer{
+	background:url(../../images/bg/blue-foote-bg.png) repeat;
+}
+
+.footer > a{
+	color:#fff;
+}

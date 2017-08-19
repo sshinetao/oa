@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>登录</title>
+	<link href="themes/css/content/layout.css" rel="stylesheet" />
+	<link href="themes/css/content/deep.css" rel="stylesheet" />
+</head>
+<body class="loginmain">
+	<div class="login">
+		<div class="containt">
+			<div class="logintitle"><span class="bigtxt">用户登录</span><span class="smltxt">UserLogin</span></div>
+			<div class="main">
+				<div class="iptline">
+					<i class="userico"></i>
+					<label class="iptplaceholder">用户名</label>
+					<input type="text" id="username" class="formipt"/>
+				</div>
+				<div id="usernameCheck" class="checkbox"></div>
+				<div class="iptline">
+					<i class="pwdico"></i>
+					<label class="iptplaceholder">密码</label>
+					<input type="password" id="password" class="formipt"/>
+				</div>
+				<div id="passwordCheck" class="checkbox"></div>
+				<div class="iptline verifyline">
+					<i class="verifyico"></i>
+					<label class="iptplaceholder">验证码</label>
+					<input type="text" id="verify" class="formipt"/>
+					<div class="verifyimg"><img src="themes/images/test/verify.jpg"/></div>
+				</div>
+				<div id="verifyCheck" class="checkbox"></div>
+				<div class="butonline flt">
+					<input type="button" value="登录" id="loginbtn" class="loginbtn"/>
+					<a>忘记密码</a>
+					<a>
+						<input type="checkbox" id="rembpwd" class=""/>
+						<label for="rembpwd">记住密码</label>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"><a href="http://www.bogusoft.com.cn">技术支持：杭州博古科技有限公司</a></div>
+</body>
+
+<script src="themes/js/public/jquery-1.11.0.min.js"></script>
+<script>
+	$(function(){
+		//begin 2017-2-15 文本框点击仿placeholder
+		$('.containt').on('click','.iptplaceholder',function(){
+			$(this).hide();
+			$(this).next().focus();
+		})
+
+		$('.containt').on('focus','.formipt',function(){
+			if($.trim($(this).val()) == ""){
+				$(this).prev().hide();
+			}
+		})
+
+		$('.containt').on('blur','.formipt',function(){
+			if($.trim($(this).val()) == ""){
+				$(this).prev().show();
+			}
+		})
+		//end
+
+		//begin 2017-2-15 点击登录时的验证
+		$('#loginbtn').on('click',function(){
+			var isPass = 0;
+			if($('#username').val() == ''){
+				isPass = 1;
+				$('#usernameCheck').text('请输入用户名');
+			}else{
+				isPass = 0;
+				$('#usernameCheck').text('');
+			}
+
+			if($('#password').val() == ''){
+				isPass = 1;
+				$('#passwordCheck').text('请输入密码');
+			}else{
+				isPass = 0;
+				$('#passwordCheck').text('');
+			}
+
+			if($('#verify').val() == ''){
+				isPass = 1;
+				$('#verifyCheck').text('请输入验证码');
+			}else{
+				isPass = 0;
+				$('#verifyCheck').text('');
+			}
+
+			if(isPass == 0){
+				//通过
+				window.location.href="login-deep.html";
+			}
+		})
+		//end
+
+		setPosition();
+	})
+
+	$(window).resize(function(){ //浏览器放大缩小时
+		setPosition();
+	})
+
+	function setPosition(){ //定位内容和footer
+		var wHeight = $(window).innerHeight();
+		var paddingTop = (wHeight - 100 - 718) / 2;
+		if(paddingTop > 0){
+			$('.login').css('paddingTop',paddingTop + 162 + 50);
+			$('.login').css('paddingBottom',paddingTop + 162);
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="系统首页" url="~/Default.aspx" >
+    <siteMapNode title="人事管理" url="" description="人事管理">
+      <siteMapNode title="员工基本档案" url="~/FileManage/PersonnelForm.aspx" description="员工基本档案"/>
+      <siteMapNode title="员工家庭成员" url="~/FileManage/FamilyForm.aspx" description="员工家庭成员"/>
+      <siteMapNode title="员工工作简历" url="~/FileManage/ResumeForm.aspx" description="员工工作简历"/>
+      <siteMapNode title="员工奖惩记录" url="~/FileManage/RewardsForm.aspx" description="员工奖惩记录"/>
+      <siteMapNode title="员工培训记录" url="~/FileManage/TrainingForm.aspx" description="员工培训记录"/>
+      <siteMapNode title="员工工作业绩" url="~/FileManage/ArchievementForm.aspx" description="员工工作业绩"/>
+      <siteMapNode title="员工离职管理" url="~/FileManage/LeaveForm.aspx" description="员工离职管理"/>
+    </siteMapNode>
+    <siteMapNode title="考勤管理" url="" description="考勤管理">
+      <siteMapNode title="月度部门考勤" url="~/CheckManage/MonthCheckForm.aspx" description="月度部门考勤"/>
+      <siteMapNode title="年度个人考勤" url="~/CheckManage/YearCheckForm.aspx" description="年度个人考勤"/>
+    </siteMapNode>
+    <siteMapNode title="工资管理" url="" description="工资管理">
+      <siteMapNode title="月度工资核算" url="~/SalaryManage/ComputeForm.aspx" description="月度工资核算"/>
+      <siteMapNode title="月度工资发放" url="~/SalaryManage/PayForm.aspx" description="月度工资发放"/>
+    </siteMapNode>
+    <siteMapNode title="查询管理" url="" description="查询管理">
+      <siteMapNode title="查询个人档案" url="~/QueryManage/QueryMemberForm.aspx" description="查询个人档案"/>
+      <siteMapNode title="查询部门档案" url="~/QueryManage/QueryDepartmentForm.aspx" description="查询部门档案"/>
+      <siteMapNode title="查询考勤信息" url="~/QueryManage/QueryCheckForm.aspx" description="查询考勤信息"/>
+      <siteMapNode title="查询工资信息" url="~/QueryManage/QuerySalaryForm.aspx" description="查询工资信息"/>
+    </siteMapNode>
+    <siteMapNode title="系统管理" url="" description="系统管理">
+      <siteMapNode title="登录管理系统" url="~/SystemManage/Login.aspx" description="登录管理系统"/>
+      <siteMapNode title="退出管理系统" url="~/SystemManage/LogOut.aspx" description="退出管理系统"/>
+      <siteMapNode title="新建操作用户" url="~/SystemManage/RegisterUser.aspx" description="新建操作用户"/>
+      <siteMapNode title="修改用户信息" url="~/SystemManage/UserInfo.aspx" description="修改用户信息"/>
+      <siteMapNode title="修改用户密码" url="~/SystemManage/UserPassword.aspx" description="修改用户密码"/>
+      <siteMapNode title="查询用户密码" url="~/SystemManage/PasswordRecovery.aspx" description="查询用户密码"/>
+      <siteMapNode title="分配用户权限" url="~/SystemManage/OperatorForm.aspx" description="分配用户权限"/>
+      <siteMapNode title="公司信息设置" url="~/SystemManage/CompanyForm.aspx" description="公司信息设置"/>
+      <siteMapNode title="公司部门设置" url="~/SystemManage/DepartmentForm.aspx" description="公司部门设置"/>
+      <siteMapNode title="系统帮助信息" url="~/SystemManage/AllErrorHelp.aspx" description="系统帮助信息"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

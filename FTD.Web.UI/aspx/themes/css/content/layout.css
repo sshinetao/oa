@@ -1,0 +1,171 @@
+@charset=utf-8;
+
+body,html{min-width:1200px;padding:0;margin:0;font-family: "Microsoft YaHei";font-size:12px;}
+input{border:0;outline: none;}
+
+.flt{
+	 /* 触发 hasLayout */
+	zoom:1;
+}
+
+.flt:after{
+	display: block;
+	content: 'clear';
+	clear:both;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.loginmain{
+	min-height: 580px;
+}
+
+.login{
+	width:500px;
+	padding-top: 20px;
+	padding-bottom: 24px;
+	margin:0 auto;
+	background:url(../../images/bg/bottom-bg.png) no-repeat bottom;
+}
+
+.outlogo{
+	height: 110px;
+	margin-bottom: 30px;
+}
+
+.outlogo img{
+	display: block;
+	width:330px;
+	height:110px;
+	margin:0 auto;
+}
+
+.login .containt{
+	padding:44px 0;
+	border:2px solid #e5e5e5;
+	background-color: #fff;
+}
+
+.login .containt .main{
+	width:330px;
+	margin:0 auto;
+}
+
+.iptline{
+	position: relative;
+	height:30px;
+	padding:8px 8px 8px 56px;
+	border:1px solid #e5e5e5;
+	border-radius:4px 4px;
+}
+
+.iptline > i{
+	position: absolute;
+	top:10px;
+	left:8px;
+	width:28px;
+	height:28px;
+}
+
+.iptline > i.userico{
+	background:url(../../images/ico/user-ico.png) no-repeat left center;
+}
+
+.iptline > i.pwdico{
+	background:url(../../images/ico/password-ico.png) no-repeat left center;
+}
+
+.iptline > i.verifyico{
+	background:url(../../images/ico/verify-ico.png) no-repeat left center;
+}
+
+.iptplaceholder{
+	position: absolute;
+	top:16px;
+	left:56px;
+	font-size: 12px;
+	color:#999;
+}
+
+.formipt{
+	width:100%;
+	height:28px;
+	line-height: 28px;
+	font-size: 14px;
+	color:#999;
+	outline: none;
+	border:0;
+}
+
+.checkbox{
+	height:18px;
+	padding:0 8px;
+	margin-bottom: 10px;
+	line-height: 18px;
+	font-size: 12px;
+	color:#dd3434;
+}
+
+.verifyline{
+	width:134px;
+}
+
+.verifyimg{
+	position: absolute;
+	top:-2px;
+	right:-130px;
+	width:112px;
+	height:46px;
+	border:1px solid #bac7d2;
+	cursor: pointer;
+}
+
+.verifyimg > img{
+	width:112px;
+	height:46px;
+}
+
+.butonline{
+	margin-top: 5px;
+}
+
+.loginbtn{
+	float: left;
+	width:114px;
+	height:36px;
+	color:#fff;
+	font-size: 14px;
+	background-color: #4290cf;
+	border-radius: 6px 6px;
+	cursor: pointer;
+}
+
+.loginbtn:active{
+	background-color: #337cb8;
+}
+
+.butonline > a{
+	float: right;
+	line-height: 36px;
+	color:#666;
+	font-size:12px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.butonline > a input[type='checkbox']{
+	vertical-align: -2px;
+}
+
+.footer{
+	margin: 0 auto;
+	line-height: 50px;
+	text-align: center;
+	font-size: 12px;
+	color:#999;
+}
+
+.footer > a{
+	color:#999;
+	text-decoration: none;
+}

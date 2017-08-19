@@ -1,0 +1,15 @@
+[
+{"productid":"FI-SW-01","productname":"Koi"},
+{"productid":"K9-DL-01","productname":"Dalmation"},
+{"productid":"RP-SN-01","productname":"Rattlesnake"},
+{"productid":"RP-LI-02","productname":"Iguana"},
+{"productid":"FL-DSH-01","productname":"Manx"},
+{"productid":"FL-DLH-02","productname":"Persian"},
+{"productid":"AV-CB-01","productname":"Amazon Parrot"}
+]
+
+[
+{"productid":"2017448812","productname":"土豆","countunit":"斤","unitcost":"0","price":"0","allprice":"0","itemid":"EST-0"},
+{"productid":"2017443931","productname":"大米","countunit":"斤","unitcost":"0","price":"0","allprice":"0","itemid":"EST-1"},
+{"productid":"2017442808","productname":"小青菜","countunit":"斤","unitcost":"0","price":"0","allprice":"0","itemid":"EST-2"}
+]}
