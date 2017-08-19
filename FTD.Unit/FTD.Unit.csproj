@@ -73,17 +73,9 @@
       <Name>FTD.DBUnit</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="bin\Debug\Aspose.Cells.dll" />
-    <Content Include="bin\Debug\COM.Excel.dll" />
-    <Content Include="bin\Debug\Excel.dll" />
-    <Content Include="bin\Debug\FTD.DBUnit.dll" />
-    <Content Include="bin\Debug\FTD.DBUnit.pdb" />
-    <Content Include="bin\Debug\FTD.Unit.dll" />
-    <Content Include="bin\Debug\FTD.Unit.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
+    <Content Include="bin\Release\FTD.Unit.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
