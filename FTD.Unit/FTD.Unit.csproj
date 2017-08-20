@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -75,7 +75,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="bin\Release\FTD.Unit.dll" />
+    <Content Include="bin\Debug\Aspose.Cells.dll" />
+    <Content Include="bin\Debug\COM.Excel.dll" />
+    <Content Include="bin\Debug\Excel.dll" />
+    <Content Include="bin\Debug\FTD.DBUnit.dll" />
+    <Content Include="bin\Debug\FTD.DBUnit.pdb" />
+    <Content Include="bin\Debug\FTD.Unit.dll" />
+    <Content Include="bin\Debug\FTD.Unit.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
