@@ -17,7 +17,6 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-[Bb]in
 [Dd]ebug*/
 *.lib
 *.sbr
@@ -31,7 +30,6 @@ _ReSharper*/
 $tf*/
 newweb/
 .vs/
-Lib/
 Dll文件/
 data/
 文档/

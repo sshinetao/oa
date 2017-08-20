@@ -63,9 +63,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FTD.Unit\bin\Debug\FTD.Unit.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.jmail">
-      <HintPath>..\DLL文件\Interop.jmail.dll</HintPath>
+    <Reference Include="Interop.jmail, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.jmail.dll</HintPath>
     </Reference>
     <Reference Include="Md5">
       <HintPath>..\..\..\OA通用系统开发加强版\OA\bin\Md5.dll</HintPath>
@@ -1771,6 +1772,17 @@
     <Content Include="aspx\Work\WorkRiZhiAdd.aspx" />
     <Content Include="aspx\Work\WorkRiZhiModify.aspx" />
     <Content Include="aspx\Work\WorkRiZhiView.aspx" />
+    <Content Include="bin\Aspose.Cells.dll" />
+    <Content Include="bin\COM.Excel.dll" />
+    <Content Include="bin\DragonControl.dll" />
+    <Content Include="bin\Excel.dll" />
+    <Content Include="bin\FreeTextBox.dll" />
+    <Content Include="bin\Md5.dll" />
+    <Content Include="bin\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\microsoft.web.ui.webcontrols.dll" />
+    <Content Include="bin\MobCallClient.dll" />
+    <Content Include="bin\office.dll" />
+    <Content Include="bin\UEditorNet.dll" />
     <Content Include="CAD\weboffice_v6.0.4.4.cab" />
     <Content Include="common-css\animate\animate.min.css" />
     <Content Include="common-css\bootstrap\bootstrap-responsive.css" />
