@@ -10,61 +10,25 @@
 namespace FTD.Web.UI.aspx.chanpinpeisong {
     
     
-    public partial class nongchanpinpeisong {
+    public partial class nongchanpinpeisong_update {
         
         /// <summary>
-        /// form1 控件。
+        /// Head3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head3;
         
         /// <summary>
-        /// DropDownList2 控件。
+        /// form3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-        
-        /// <summary>
-        /// TextBox3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
-        
-        /// <summary>
-        /// iButton4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button iButton4;
-        
-        /// <summary>
-        /// iButton1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button iButton1;
-        
-        /// <summary>
-        /// iButton5 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button iButton5;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form3;
         
         /// <summary>
         /// iButton3 控件。
@@ -76,93 +40,84 @@ namespace FTD.Web.UI.aspx.chanpinpeisong {
         protected global::System.Web.UI.WebControls.Button iButton3;
         
         /// <summary>
-        /// GVData 控件。
+        /// hidVal3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVData;
+        protected global::System.Web.UI.WebControls.HiddenField hidVal3;
         
         /// <summary>
-        /// BtnFirst 控件。
+        /// recordtime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnFirst;
+        protected global::System.Web.UI.WebControls.TextBox recordtime;
         
         /// <summary>
-        /// BtnPre 控件。
+        /// peisongdanwei 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnPre;
+        protected global::System.Web.UI.WebControls.TextBox peisongdanwei;
         
         /// <summary>
-        /// BtnNext 控件。
+        /// peisongdizhi 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnNext;
+        protected global::System.Web.UI.WebControls.TextBox peisongdizhi;
         
         /// <summary>
-        /// BtnLast 控件。
+        /// dingdanhao 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnLast;
+        protected global::System.Web.UI.WebControls.TextBox dingdanhao;
         
         /// <summary>
-        /// LabCurrentPage 控件。
+        /// jiaojieren 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabCurrentPage;
+        protected global::System.Web.UI.WebControls.TextBox jiaojieren;
         
         /// <summary>
-        /// LabPageSum 控件。
+        /// peisongcheliang 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabPageSum;
+        protected global::System.Web.UI.WebControls.TextBox peisongcheliang;
         
         /// <summary>
-        /// TxtPageSize 控件。
+        /// peisonglicheng 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPageSize;
+        protected global::System.Web.UI.WebControls.TextBox peisonglicheng;
         
         /// <summary>
-        /// GoPage 控件。
+        /// peisongren 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GoPage;
-        
-        /// <summary>
-        /// ButtonGo 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ButtonGo;
+        protected global::System.Web.UI.WebControls.TextBox peisongren;
     }
 }

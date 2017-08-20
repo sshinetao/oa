@@ -38,13 +38,6 @@ namespace OA.aspx.Car{
 		Model.BackInfo=this.txtBackInfo.Text.ToString();
 		
 		Model.Add();
-		
-		//写系统日志
-		FTD.BLL.ERPRiZhi MyRiZhi = new FTD.BLL.ERPRiZhi();
-		MyRiZhi.UserName = FTD.Unit.PublicMethod.GetSessionValue("UserName");
-		MyRiZhi.DoSomething = "用户添加车辆使用信息(" + this.txtCarName.Text + ")";
-		MyRiZhi.IpStr = System.Web.HttpContext.Current.Request.UserHostAddress.ToString();
-		MyRiZhi.Add();
 
         FTD.Unit.MessageBox.ShowAndRedirect(this, "车辆使用信息添加成功！", "CarShiYong.aspx");
 	}

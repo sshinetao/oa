@@ -160,12 +160,6 @@ namespace OA.aspx.Car{
 		else
 		{
 			DataBindToGridview("");
-			//写系统日志
-			FTD.BLL.ERPRiZhi MyRiZhi = new FTD.BLL.ERPRiZhi();
-			MyRiZhi.UserName = FTD.Unit.PublicMethod.GetSessionValue("UserName");
-			MyRiZhi.DoSomething = "用户删除车辆保险/年检信息";
-			MyRiZhi.IpStr = System.Web.HttpContext.Current.Request.UserHostAddress.ToString();
-			MyRiZhi.Add();
 		}
 	}
 	protected void iButton2_Click(object sender, EventArgs e)

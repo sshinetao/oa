@@ -53,6 +53,18 @@
                     <asp:Label ID="Label1" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td align="right" style="width: 170px; background-color: #f9f9f7; height: 25px;" >
+                文件编号：</td>
+                <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
+                    <asp:Label ID="Label10" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td align="right" style="width: 170px; background-color: #f9f9f7; height: 25px;" >
+                发文单位：</td>
+                <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
+                    <asp:Label ID="Label11" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #f9f9f7">
                 发送人：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">

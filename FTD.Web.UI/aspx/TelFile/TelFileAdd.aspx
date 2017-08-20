@@ -24,7 +24,7 @@
             <tr>
                 <td valign="middle" style=" height: 30px;">
                     &nbsp;<img src="../../images/BanKuaiJianTou.gif" />
-                    <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;公文收发&nbsp;>>&nbsp;添加传阅文件
+                    <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;公文管理&nbsp;>>&nbsp;收文登记
                 </td>
                 <td align="right" valign="middle" style=" height: 30px;">
                     &nbsp;
@@ -49,6 +49,27 @@
                         ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                 </td>
             </tr>
+            <tr>
+                <td align="right" style="width: 170px; background-color: #f9f9f7; height: 25px;">
+                    文件编号：
+                </td>
+                <td style="background-color: #ffffff; height: 25px; padding-left: 5px;">
+                    <asp:TextBox ID="TextBox4" runat="server" Width="350px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox4"
+                        ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" style="width: 170px; background-color: #f9f9f7; height: 25px;">
+                    发文单位：
+                </td>
+                <td style="background-color: #ffffff; height: 25px; padding-left: 5px;">
+                    <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox5"
+                        ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+
             <tr>
                 <td align="right" style="width: 170px; height: 25px; background-color: #f9f9f7">
                     接收人：

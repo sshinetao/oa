@@ -50,13 +50,6 @@ namespace OA.aspx.Car{
 		
 		Model.Update();
 		
-		//写系统日志
-		FTD.BLL.ERPRiZhi MyRiZhi = new FTD.BLL.ERPRiZhi();
-		MyRiZhi.UserName = FTD.Unit.PublicMethod.GetSessionValue("UserName");
-		MyRiZhi.DoSomething = "用户修改驾驶员信息(" + this.txtCarName.Text + ")";
-		MyRiZhi.IpStr = System.Web.HttpContext.Current.Request.UserHostAddress.ToString();
-		MyRiZhi.Add();
-		
 		FTD.Unit.MessageBox.ShowAndRedirect(this, "驾驶员相关信息修改成功！", "CarLog.aspx");
 	}
 }

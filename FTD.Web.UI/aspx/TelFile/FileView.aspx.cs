@@ -22,15 +22,17 @@ namespace OA.aspx.TelFile{
 
             FTD.BLL.ERPTelFile MyModel = new FTD.BLL.ERPTelFile();
             MyModel.GetModel(int.Parse(Request.QueryString["ID"].ToString().Trim()));
-            this.Label1.Text=MyModel.TitleStr;
-            this.Label2.Text=MyModel.FromUser;
-            this.Label3.Text=MyModel.TimeStr.ToString();
-            this.Label4.Text=MyModel.ToUser;
-            this.Label5.Text=MyModel.YiJieShouRen;
-            this.Label6.Text=MyModel.FileType;
-            this.Label7.Text = FTD.Unit.PublicMethod.GetWenJian(MyModel.FuJianStr, "../../UploadFile/");
-            this.Label8.Text=MyModel.ContentStr;
-            this.Label9.Text = MyModel.ChuanYueYiJian;
+            Label1.Text=MyModel.TitleStr;
+            Label2.Text=MyModel.FromUser;
+            Label3.Text=MyModel.TimeStr.ToString();
+            Label4.Text=MyModel.ToUser;
+            Label5.Text=MyModel.YiJieShouRen;
+            Label6.Text=MyModel.FileType;
+            Label7.Text = FTD.Unit.PublicMethod.GetWenJian(MyModel.FuJianStr, "../../UploadFile/");
+            Label8.Text=MyModel.ContentStr;
+            Label9.Text = MyModel.ChuanYueYiJian;
+            Label10.Text = MyModel.Wenjianbianhao;
+            Label11.Text = MyModel.Fawendanwei;
 
             //写系统日志
             FTD.BLL.ERPRiZhi MyRiZhi = new FTD.BLL.ERPRiZhi();

@@ -25,6 +25,8 @@ namespace FTD.BLL
         private string _chuanyueyijian;
         private string _qianshouhouidlist;
         private string _chuanyuehouidlist1;
+        private string _fawendanwei;
+        private string _wenjianbianhao;
         /// <summary>
         /// 
         /// </summary>
@@ -121,6 +123,32 @@ namespace FTD.BLL
             set { _chuanyuehouidlist1 = value; }
             get { return _chuanyuehouidlist1; }
         }
+
+        public string Fawendanwei
+        {
+            get
+            {
+                return _fawendanwei;
+            }
+
+            set
+            {
+                _fawendanwei = value;
+            }
+        }
+
+        public string Wenjianbianhao
+        {
+            get
+            {
+                return _wenjianbianhao;
+            }
+
+            set
+            {
+                _wenjianbianhao = value;
+            }
+        }
         #endregion Model
 
 
@@ -132,7 +160,7 @@ namespace FTD.BLL
         public ERPTelFile(int ID)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select ID,TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1 ");
+            strSql.Append("select ID,TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1,fawendanwei , wenjianbianhao ");
             strSql.Append(" FROM ERPTelFile ");
             strSql.Append(" where ID=@ID ");
             SqlParameter[] parameters = {
@@ -160,6 +188,8 @@ namespace FTD.BLL
                 ChuanYueYiJian = ds.Tables[0].Rows[0]["ChuanYueYiJian"].ToString();
                 QianShouHouIDList = ds.Tables[0].Rows[0]["QianShouHouIDList"].ToString();
                 ChuanYueHouIDList1 = ds.Tables[0].Rows[0]["ChuanYueHouIDList1"].ToString();
+                Fawendanwei = ds.Tables[0].Rows[0]["fawendanwei"].ToString();
+                Wenjianbianhao = ds.Tables[0].Rows[0]["wenjianbianhao"].ToString();
             }
         }
         /// <summary>
@@ -186,9 +216,9 @@ namespace FTD.BLL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into ERPTelFile(");
-            strSql.Append("TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1)");
+            strSql.Append("TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1,fawendanwei , wenjianbianhao )");
             strSql.Append(" values (");
-            strSql.Append("@TitleStr,@FromUser,@TimeStr,@FileType,@ToUser,@YiJieShouRen,@ContentStr,@FuJianStr,@ChuanYueYiJian,@QianShouHouIDList,@ChuanYueHouIDList1)");
+            strSql.Append("@TitleStr,@FromUser,@TimeStr,@FileType,@ToUser,@YiJieShouRen,@ContentStr,@FuJianStr,@ChuanYueYiJian,@QianShouHouIDList,@ChuanYueHouIDList1,@fawendanwei , @wenjianbianhao )");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
 					new SqlParameter("@TitleStr", SqlDbType.VarChar,500),
@@ -201,7 +231,9 @@ namespace FTD.BLL
 					new SqlParameter("@FuJianStr", SqlDbType.VarChar,1000),
 					new SqlParameter("@ChuanYueYiJian", SqlDbType.Text),
 					new SqlParameter("@QianShouHouIDList", SqlDbType.VarChar,8000),
-					new SqlParameter("@ChuanYueHouIDList1", SqlDbType.VarChar,8000)};
+					new SqlParameter("@ChuanYueHouIDList1", SqlDbType.VarChar,8000),
+                    new SqlParameter("@fawendanwei", SqlDbType.VarChar,100),
+                    new SqlParameter("@wenjianbianhao", SqlDbType.VarChar,100)};
             parameters[0].Value = TitleStr;
             parameters[1].Value = FromUser;
             parameters[2].Value = TimeStr;
@@ -213,6 +245,8 @@ namespace FTD.BLL
             parameters[8].Value = ChuanYueYiJian;
             parameters[9].Value = QianShouHouIDList;
             parameters[10].Value = ChuanYueHouIDList1;
+            parameters[11].Value = Fawendanwei;
+            parameters[12].Value = Wenjianbianhao;
 
             object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
             if (obj == null)
@@ -241,7 +275,9 @@ namespace FTD.BLL
             strSql.Append("FuJianStr=@FuJianStr,");
             strSql.Append("ChuanYueYiJian=@ChuanYueYiJian,");
             strSql.Append("QianShouHouIDList=@QianShouHouIDList,");
-            strSql.Append("ChuanYueHouIDList1=@ChuanYueHouIDList1");
+            strSql.Append("ChuanYueHouIDList1=@ChuanYueHouIDList1,");
+            strSql.Append("fawendanwei=@fawendanwei,");
+            strSql.Append("wenjianbianhao=@wenjianbianhao");
             strSql.Append(" where ID=@ID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4),
@@ -255,7 +291,9 @@ namespace FTD.BLL
 					new SqlParameter("@FuJianStr", SqlDbType.VarChar,1000),
 					new SqlParameter("@ChuanYueYiJian", SqlDbType.Text),
 					new SqlParameter("@QianShouHouIDList", SqlDbType.VarChar,8000),
-					new SqlParameter("@ChuanYueHouIDList1", SqlDbType.VarChar,8000)};
+					new SqlParameter("@ChuanYueHouIDList1", SqlDbType.VarChar,8000),
+                    new SqlParameter("@fawendanwei", SqlDbType.VarChar,100),
+                    new SqlParameter("@wenjianbianhao", SqlDbType.VarChar,100)};
             parameters[0].Value = ID;
             parameters[1].Value = TitleStr;
             parameters[2].Value = FromUser;
@@ -268,7 +306,8 @@ namespace FTD.BLL
             parameters[9].Value = ChuanYueYiJian;
             parameters[10].Value = QianShouHouIDList;
             parameters[11].Value = ChuanYueHouIDList1;
-
+            parameters[12].Value = Fawendanwei;
+            parameters[13].Value = Wenjianbianhao;
             DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
         }
 
@@ -294,7 +333,7 @@ namespace FTD.BLL
         public void GetModel(int ID)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 ID,TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1 ");
+            strSql.Append("select  top 1 ID,TitleStr,FromUser,TimeStr,FileType,ToUser,YiJieShouRen,ContentStr,FuJianStr,ChuanYueYiJian,QianShouHouIDList,ChuanYueHouIDList1,fawendanwei , wenjianbianhao  ");
             strSql.Append(" FROM ERPTelFile ");
             strSql.Append(" where ID=@ID ");
             SqlParameter[] parameters = {
@@ -322,6 +361,8 @@ namespace FTD.BLL
                 ChuanYueYiJian = ds.Tables[0].Rows[0]["ChuanYueYiJian"].ToString();
                 QianShouHouIDList = ds.Tables[0].Rows[0]["QianShouHouIDList"].ToString();
                 ChuanYueHouIDList1 = ds.Tables[0].Rows[0]["ChuanYueHouIDList1"].ToString();
+                Fawendanwei = ds.Tables[0].Rows[0]["fawendanwei"].ToString();
+                Wenjianbianhao = ds.Tables[0].Rows[0]["wenjianbianhao"].ToString();
             }
         }
 

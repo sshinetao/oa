@@ -45,6 +45,8 @@ namespace OA.aspx.TelFile{
         MyModel.YiJieShouRen = "";
         MyModel.ChuanYueHouIDList1 = this.DropDownList1.SelectedItem.Value.ToString();
         MyModel.QianShouHouIDList = "0";
+        MyModel.Fawendanwei = TextBox5.Text + "";
+        MyModel.Wenjianbianhao = TextBox4.Text + "";
         MyModel.Add();
 
 

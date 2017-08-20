@@ -39,13 +39,6 @@ namespace OA.aspx.Car{
 		
 		Model.Add();
 		
-		//写系统日志
-		FTD.BLL.ERPRiZhi MyRiZhi = new FTD.BLL.ERPRiZhi();
-		MyRiZhi.UserName = FTD.Unit.PublicMethod.GetSessionValue("UserName");
-		MyRiZhi.DoSomething = "用户添加车辆保险/年检信息(" + this.txtCarName.Text + ")";
-		MyRiZhi.IpStr = System.Web.HttpContext.Current.Request.UserHostAddress.ToString();
-		MyRiZhi.Add();
-		
 		FTD.Unit.MessageBox.ShowAndRedirect(this, "车辆保险/年检信息添加成功！", "CarBaoXian.aspx");
 	}
 }

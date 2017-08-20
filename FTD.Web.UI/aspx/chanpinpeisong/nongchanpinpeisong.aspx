@@ -1,9 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="nongchanpinpeisong.aspx.cs" Inherits="FTD.Web.UI.aspx.chanpinpeisong.nongchanpinpeisong" %>
-
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -114,8 +110,8 @@
                     </td>
                     <td align="right" valign="middle" style="height: 30px;">查询：
                         <asp:DropDownList ID="DropDownList2" runat="server">
-                            <asp:ListItem Value="rname">包装人员姓名</asp:ListItem>
-                            <asp:ListItem Value="pname">产品名称</asp:ListItem>
+                            <asp:ListItem Value="jiaojieren">交接人</asp:ListItem>
+                            <asp:ListItem Value="peisongren">配送人</asp:ListItem>
                         </asp:DropDownList>
                         <asp:TextBox ID="TextBox3" runat="server" Width="80px"></asp:TextBox>
                         <asp:Button ID="iButton4" runat="server" CssClass="btn btn-blue" Text="查询" OnClick="iButton4_Click" />
@@ -148,9 +144,9 @@
                                     <input id="CheckBoxAll" onclick="CheckAll()" type="checkbox" />
                                 </HeaderTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="包装人员姓名">
+                            <asp:TemplateField HeaderText="配送人">
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" ForeColor="green" NavigateUrl='<%# "bzrrstj_update.aspx?ID="+ DataBinder.Eval(Container.DataItem, "id")%>'><%# DataBinder.Eval(Container.DataItem, "rname")%></asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" ForeColor="green" NavigateUrl='<%# "nongchanpinpeisong_update.aspx?ID="+ DataBinder.Eval(Container.DataItem, "id")%>'><%# DataBinder.Eval(Container.DataItem, "rname")%></asp:HyperLink>
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Left" />
                             </asp:TemplateField>

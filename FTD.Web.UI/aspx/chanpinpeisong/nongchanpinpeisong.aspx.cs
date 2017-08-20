@@ -20,7 +20,7 @@ namespace FTD.Web.UI.aspx.chanpinpeisong
         }
         private void DataBindToGridview()
         {
-            FTD.BLL.Bzrrstj MyModel = new FTD.BLL.Bzrrstj();
+            FTD.BLL.ChanPinPeiSong MyModel = new FTD.BLL.ChanPinPeiSong();
 
             GVData.DataSource = MyModel.GetList(DropDownList2.SelectedItem.Value.ToString() + " like '%" + this.TextBox3.Text.Trim() + "%' order by ID desc");
             GVData.DataBind();
@@ -30,7 +30,7 @@ namespace FTD.Web.UI.aspx.chanpinpeisong
         }
         public void DataBindToGridview(string IDList)
         {
-            FTD.BLL.Bzrrstj MyModel = new FTD.BLL.Bzrrstj();
+            FTD.BLL.ChanPinPeiSong MyModel = new FTD.BLL.ChanPinPeiSong();
             DataSet ds = new DataSet();
             string _strsql = "";
 
@@ -64,14 +64,14 @@ namespace FTD.Web.UI.aspx.chanpinpeisong
 
         protected void iButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Bzrrstj_add.aspx");
+            Response.Redirect("nongchanpinpeisong_add.aspx");
         }
 
         protected void iButton5_Click(object sender, EventArgs e)
         {
             string CheckStr = FTD.Unit.PublicMethod.CheckCbx(this.GVData, "CheckSelect", "LabVisible");
             string[] CheckStrArray = CheckStr.Split(',');
-            Response.Redirect("Bzrrstj_update.aspx?ID=" + CheckStrArray[0].ToString());
+            Response.Redirect("nongchanpinpeisong_update.aspx?ID=" + CheckStrArray[0].ToString());
         }
 
         protected void iButton2_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace FTD.Web.UI.aspx.chanpinpeisong
         {
             string CheckStr = FTD.Unit.PublicMethod.CheckCbx(this.GVData, "CheckSelect", "LabVisible");
             string[] CheckStrArray = CheckStr.Split(',');
-            Response.Redirect("Bzrrstj_update.aspx?ID=" + CheckStrArray[0].ToString());
+            Response.Redirect("nongchanpinpeisong_update.aspx?ID=" + CheckStrArray[0].ToString());
         }
 
         #region  分页方法
