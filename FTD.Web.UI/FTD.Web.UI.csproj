@@ -1728,6 +1728,9 @@
     <Content Include="aspx\TelFile\CYDICModify.aspx" />
     <Content Include="aspx\TelFile\FileView.aspx" />
     <Content Include="aspx\TelFile\GetFile.aspx" />
+    <Content Include="aspx\TelFile\gongwenhegaoView.aspx" />
+    <Content Include="aspx\TelFile\gongwenhegao.aspx" />
+    <Content Include="aspx\TelFile\gongwennigao.aspx" />
     <Content Include="aspx\TelFile\JSDIC.aspx" />
     <Content Include="aspx\TelFile\JSDICAdd.aspx" />
     <Content Include="aspx\TelFile\JSDICModify.aspx" />
@@ -14517,6 +14520,27 @@
     <Compile Include="aspx\TelFile\GetFile.aspx.designer.cs">
       <DependentUpon>GetFile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="aspx\TelFile\gongwenhegaoView.aspx.cs">
+      <DependentUpon>gongwenhegaoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\TelFile\gongwenhegaoView.aspx.designer.cs">
+      <DependentUpon>gongwenhegaoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\TelFile\gongwenhegao.aspx.cs">
+      <DependentUpon>gongwenhegao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\TelFile\gongwenhegao.aspx.designer.cs">
+      <DependentUpon>gongwenhegao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\TelFile\gongwennigao.aspx.cs">
+      <DependentUpon>gongwennigao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\TelFile\gongwennigao.aspx.designer.cs">
+      <DependentUpon>gongwennigao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="aspx\TelFile\JSDIC.aspx.cs">
       <DependentUpon>JSDIC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -17647,6 +17671,7 @@
     <Folder Include="Controls\ExtJS\resources\raw-images\.svn\tmp\props\" />
     <Folder Include="Controls\ExtJS\resources\raw-images\.svn\tmp\text-base\" />
     <Folder Include="UploadFile\MailAttachments\" />
+    <Folder Include="UploadFile\公文附件\" />
     <Folder Include="UploadFile\合同管理\" />
   </ItemGroup>
   <ItemGroup>

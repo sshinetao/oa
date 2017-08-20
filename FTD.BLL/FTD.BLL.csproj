@@ -196,6 +196,7 @@
     <Compile Include="GoodsSplit.cs" />
     <Compile Include="GoodsSplitLast.cs" />
     <Compile Include="GoodsType.cs" />
+    <Compile Include="GWGL.cs" />
     <Compile Include="GZRZ.cs" />
     <Compile Include="HTGL.cs" />
     <Compile Include="huiyuanLog.cs" />
