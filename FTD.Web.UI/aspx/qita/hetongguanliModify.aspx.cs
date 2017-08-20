@@ -19,7 +19,6 @@ namespace FTD.Web.UI.aspx.qita
                 {
                     int id = (Convert.ToInt32(Request.Params["id"]));
                     ShowInfo(id);
-                    Unit.MessageBox.Show(this, Hetongqixian.Text);
                 }
             }
         }

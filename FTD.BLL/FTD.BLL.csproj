@@ -197,7 +197,6 @@
     <Compile Include="GoodsSplitLast.cs" />
     <Compile Include="GoodsType.cs" />
     <Compile Include="GZRZ.cs" />
-    <Compile Include="hetongguanli.cs" />
     <Compile Include="HTGL.cs" />
     <Compile Include="huiyuanLog.cs" />
     <Compile Include="IncomeProject.cs" />
@@ -296,6 +295,7 @@
     <Compile Include="SWDJFB.cs" />
     <Compile Include="SystemLog.cs" />
     <Compile Include="TrafficType.cs" />
+    <Compile Include="XMCWB.cs" />
     <Compile Include="Xsck_WorkStreamJd.cs" />
     <Compile Include="Xsck_WorkStreamName.cs" />
     <Compile Include="Xsck_WorkStreamType.cs" />

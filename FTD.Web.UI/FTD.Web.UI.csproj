@@ -1600,6 +1600,10 @@
     <Content Include="aspx\Project\ShouKuanView.aspx" />
     <Content Include="aspx\Project\ShuJuTongJi.aspx" />
     <Content Include="aspx\Project\TuXingJinDu.aspx" />
+    <Content Include="aspx\Project\Xiangmucaiwubiao.aspx" />
+    <Content Include="aspx\Project\XiangmucaiwubiaoAdd.aspx" />
+    <Content Include="aspx\Project\XiangmucaiwubiaoModify.aspx" />
+    <Content Include="aspx\Project\XiangmucaiwubiaoView.aspx" />
     <Content Include="aspx\qita\hetongguanli.aspx" />
     <Content Include="aspx\qita\hetongguanliView.aspx" />
     <Content Include="aspx\qita\hetongguanliAdd.aspx" />
@@ -1772,17 +1776,6 @@
     <Content Include="aspx\Work\WorkRiZhiAdd.aspx" />
     <Content Include="aspx\Work\WorkRiZhiModify.aspx" />
     <Content Include="aspx\Work\WorkRiZhiView.aspx" />
-    <Content Include="bin\Aspose.Cells.dll" />
-    <Content Include="bin\COM.Excel.dll" />
-    <Content Include="bin\DragonControl.dll" />
-    <Content Include="bin\Excel.dll" />
-    <Content Include="bin\FreeTextBox.dll" />
-    <Content Include="bin\Md5.dll" />
-    <Content Include="bin\Microsoft.Vbe.Interop.dll" />
-    <Content Include="bin\microsoft.web.ui.webcontrols.dll" />
-    <Content Include="bin\MobCallClient.dll" />
-    <Content Include="bin\office.dll" />
-    <Content Include="bin\UEditorNet.dll" />
     <Content Include="CAD\weboffice_v6.0.4.4.cab" />
     <Content Include="common-css\animate\animate.min.css" />
     <Content Include="common-css\bootstrap\bootstrap-responsive.css" />
@@ -13625,6 +13618,34 @@
     </Compile>
     <Compile Include="aspx\Project\TuXingJinDu.aspx.designer.cs">
       <DependentUpon>TuXingJinDu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\Project\Xiangmucaiwubiao.aspx.cs">
+      <DependentUpon>Xiangmucaiwubiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\Project\Xiangmucaiwubiao.aspx.designer.cs">
+      <DependentUpon>Xiangmucaiwubiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoAdd.aspx.cs">
+      <DependentUpon>XiangmucaiwubiaoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoAdd.aspx.designer.cs">
+      <DependentUpon>XiangmucaiwubiaoAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoModify.aspx.cs">
+      <DependentUpon>XiangmucaiwubiaoModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoModify.aspx.designer.cs">
+      <DependentUpon>XiangmucaiwubiaoModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoView.aspx.cs">
+      <DependentUpon>XiangmucaiwubiaoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\Project\XiangmucaiwubiaoView.aspx.designer.cs">
+      <DependentUpon>XiangmucaiwubiaoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\qita\hetongguanli.aspx.cs">
       <DependentUpon>hetongguanli.aspx</DependentUpon>

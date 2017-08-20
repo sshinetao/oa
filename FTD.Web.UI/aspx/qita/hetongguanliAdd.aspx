@@ -59,13 +59,13 @@
                 </td>
                 <td height="25" width="30%" align="right" style="width: 170px; height: 25px; background-color: #f9f9f7">合同期限：</td>
                 <td height="25" width="*" align="left">
-                    <asp:TextBox ID="Hetongqixian" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="Hetongqixian" runat="server" Width="200px" onclick="WdatePicker();"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td height="25" width="30%" align="right" style="width: 170px; height: 25px; background-color: #f9f9f7">签订日期：</td>
                 <td height="25" width="*" align="left">
-                    <asp:TextBox ID="Qiandingriqi" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="Qiandingriqi" runat="server" Width="200px" onclick="WdatePicker();"></asp:TextBox>
                 </td>
                 <td height="25" width="30%" align="right" style="width: 170px; height: 25px; background-color: #f9f9f7">内容：</td>
                 <td height="25" width="*" align="left">
