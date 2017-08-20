@@ -144,14 +144,13 @@
                                     <input id="CheckBoxAll" onclick="CheckAll()" type="checkbox" />
                                 </HeaderTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="配送人">
+                            <asp:TemplateField HeaderText="配送单位">
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" ForeColor="green" NavigateUrl='<%# "nongchanpinpeisong_update.aspx?ID="+ DataBinder.Eval(Container.DataItem, "id")%>'><%# DataBinder.Eval(Container.DataItem, "rname")%></asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" ForeColor="green" NavigateUrl='<%# "nongchanpinpeisong_update.aspx?ID="+ DataBinder.Eval(Container.DataItem, "id")%>'><%# DataBinder.Eval(Container.DataItem, "peisongdanwei")%></asp:HyperLink>
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Left" />
                             </asp:TemplateField>
                             <asp:BoundField DataField="recordtime" HeaderText="记录时间"></asp:BoundField>
-                            <asp:BoundField DataField="peisongdanwei" HeaderText="配送单位"></asp:BoundField>
                             <asp:BoundField DataField="peisongdizhi" HeaderText="配送地址"></asp:BoundField>
                             <asp:BoundField DataField="dingdanhao" HeaderText="货物订单号"></asp:BoundField>
                             <asp:BoundField DataField="jiaojieren" HeaderText="交接人"></asp:BoundField>

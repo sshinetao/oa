@@ -209,11 +209,11 @@ namespace FTD.BLL
         public int Add()
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("insert into nongchanpinpeisong (");
+            strSql.Append("insert into nongchanpinpeisong ( ");
             strSql.Append("recordtime,peisongdanwei,peisongdizhi,dingdanhao,jiaojieren,peisongcheliang,peisonglicheng,peisongren )");
             strSql.Append(" values (");
-            strSql.Append("@recordtime,@peisongdanwei,@peisongdizhi,@dingdanhao,@jiaojieren,@peisongcheliang，@peisonglicheng，@peisongren )");
-            strSql.Append(";select @@IDENTITY");
+            strSql.Append("@recordtime,@peisongdanwei,@peisongdizhi,@dingdanhao,@jiaojieren,@peisongcheliang,@peisonglicheng,@peisongren )");
+            strSql.Append(";select @@IDENTITY ");
             SqlParameter[] parameters = {
                     new SqlParameter("@recordtime", SqlDbType.DateTime),
                     new SqlParameter("@peisongdanwei", SqlDbType.VarChar,100),
@@ -231,7 +231,7 @@ namespace FTD.BLL
             parameters[5].Value = peisongcheliang;
             parameters[6].Value = peisonglicheng;
             parameters[7].Value = peisongren;
-
+             
             object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
             if (obj == null)
             {

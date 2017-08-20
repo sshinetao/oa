@@ -161,6 +161,8 @@
     <Content Include="aspx\Car\CarWeiZhangModify.aspx" />
     <Content Include="aspx\Car\CarWeiZhangView.aspx" />
     <Content Include="aspx\chanpinpeisong\nongchanpinpeisong.aspx" />
+    <Content Include="aspx\chanpinpeisong\nongchanpinpeisong_add.aspx" />
+    <Content Include="aspx\chanpinpeisong\nongchanpinpeisong_update.aspx" />
     <Content Include="aspx\CRM\BaoJiaAdd.aspx" />
     <Content Include="aspx\CRM\BaoJiaModify.aspx" />
     <Content Include="aspx\CRM\BaoJiaView.aspx" />
@@ -7872,6 +7874,20 @@
     </Compile>
     <Compile Include="aspx\chanpinpeisong\nongchanpinpeisong.aspx.designer.cs">
       <DependentUpon>nongchanpinpeisong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\chanpinpeisong\nongchanpinpeisong_add.aspx.cs">
+      <DependentUpon>nongchanpinpeisong_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\chanpinpeisong\nongchanpinpeisong_add.aspx.designer.cs">
+      <DependentUpon>nongchanpinpeisong_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\chanpinpeisong\nongchanpinpeisong_update.aspx.cs">
+      <DependentUpon>nongchanpinpeisong_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\chanpinpeisong\nongchanpinpeisong_update.aspx.designer.cs">
+      <DependentUpon>nongchanpinpeisong_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\CRM\BaoJiaAdd.aspx.cs">
       <DependentUpon>BaoJiaAdd.aspx</DependentUpon>
