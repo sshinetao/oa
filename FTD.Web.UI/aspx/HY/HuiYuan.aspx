@@ -153,7 +153,7 @@
 					<asp:TemplateField HeaderText="客户姓名"> <ItemTemplate> <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" ForeColor="green" NavigateUrl='<%# "HuiYuanModify.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "Customer")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="Tel" HeaderText="联系电话" ></asp:BoundField>     
 					<asp:BoundField DataField="address" HeaderText="地址" ></asp:BoundField>     
-					<asp:BoundField DataField="TaoCanNum" HeaderText="套餐" ></asp:BoundField> 
+					<asp:BoundField DataField="TaoCanName" HeaderText="套餐" ></asp:BoundField> 
 					<asp:BoundField DataField="SendType" HeaderText="配送方式" ></asp:BoundField>     
 					<asp:TemplateField HeaderText="已配送/总配送"> <ItemTemplate>
                         <%# DataBinder.Eval(Container.DataItem, "RealSend")%>/<%# DataBinder.Eval(Container.DataItem, "SendCounts")%>

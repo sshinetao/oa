@@ -37,7 +37,7 @@ namespace OA.aspx.HY{
             ddlSendType.SelectedValue = Model.SendType;
             Model.Sendrole = GetChecked(ckSendRole, "|");
             Model.SendTime = GetChecked(ckSendRole, "|");
-            ddlTaoCan.SelectedItem.Text = Model.TaoCanNum;
+                ddlTaoCan.SelectedValue = Model.TaoCanNum;
             txtTel.Text = Model.Tel;  
 		}
 	}

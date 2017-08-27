@@ -498,9 +498,9 @@ namespace FTD.BLL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select [ERPNewHuiYuan].Id,Customer,Tel,Address,Sendrole,SendTime,SendCounts,RealSend,FirstTime,SendType,CStaus,EndTime,OrderNumber,      TaoCanNum,UserName,CreateTime ");
+            strSql.Append("select [ERPNewHuiYuan].Id,Customer,Tel,Address,Sendrole,SendTime,SendCounts,RealSend,FirstTime,SendType,CStaus,EndTime,OrderNumber,      TaoCanNum,UserName,CreateTime,TaoCanName ");
             strSql.Append(" FROM [ERPNewHuiYuan] ");
-            //strSql.Append("LEFT JOIN [ERPHuiYuanTaoCan] ON [ERPHuiYuanTaoCan].SendCount = [ERPNewHuiYuan].TaoCanNum");
+            strSql.Append("LEFT JOIN [ERPHuiYuanTaoCan] ON [ERPHuiYuanTaoCan].SendCount = [ERPNewHuiYuan].TaoCanNum");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
