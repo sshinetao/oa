@@ -12,6 +12,8 @@ namespace FTD.Web.UI.aspx.erp
 {
     public partial class IncomeRoomLeading : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,8 +28,8 @@ namespace FTD.Web.UI.aspx.erp
             {
                 Random g = new Random();
                 string rad = g.Next(10000).ToString();
-                string _username = this.Session["UserName"].ToString();
-                string _realname = this.Session["TrueName"].ToString();
+                string _username = Unit.PublicMethod.GetSessionValue("UserName") +"";
+                string _realname = Unit.PublicMethod.GetSessionValue("TrueName") + "";// this.Session["TrueName"]+"";
                 string _number = "" + System.DateTime.Now.Year.ToString() + "" + System.DateTime.Now.Month.ToString() + "" + System.DateTime.Now.Day.ToString() + "" + System.DateTime.Now.Hour.ToString() + "" + System.DateTime.Now.Minute.ToString() + "" + System.DateTime.Now.Second.ToString() + "" + System.DateTime.Now.Millisecond.ToString() + "" + rad + "";
                 string _title = "";
                 string _shtime ="";
@@ -37,7 +39,7 @@ namespace FTD.Web.UI.aspx.erp
                 string _StreamNumber = "";
                 string _Storeroom = ""; //来源仓库
                 string _InSource ="";//入库来源
-
+                string _Rukuleixing="";
                 string _Gname = "待审核";
                 int n = 10000;
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -60,6 +62,7 @@ namespace FTD.Web.UI.aspx.erp
                                 {
                                     _StockPeoName = strArray[0].Trim().Replace("仓管：", "").Replace("仓管:", "");
                                     _Storeroom = strArray[1].Trim().Replace("仓库号：", "").Replace("仓库号:", "");
+                                    _Rukuleixing = strArray[2].Trim().Replace("入库类型：", "").Replace("入库类型:", "");
                                     _shtime = strArray[com_length - 1].Replace('年', '-').Replace('月', '-').Replace('日', ' ').Trim();
 
                                 }
@@ -121,6 +124,7 @@ namespace FTD.Web.UI.aspx.erp
                 _bll.StockPeoNum = _StockPeoNum;
                 _bll.StockPeoName = _StockPeoName;
                 _bll.Storeroom = _Storeroom;
+                _bll.Rukuleixing = _Rukuleixing;
                 _bll.InSource = _InSource;
                 _bll.Remark = _Remark;
                 _bll.State = "待审核";
