@@ -40,8 +40,20 @@
 			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 				<TBODY>
 					<TR>
-						<TD style="WIDTH: 44px"><FONT face="宋体">商品：</FONT></TD>
+                        <td style="width: 44px;margin-left:50px"><font face="宋体">
+                            <asp:DropDownList runat="server" ID="ddl">
+                                <asp:ListItem Text="商品" Value="GoodsName" />
+                                <asp:ListItem Text="计量单位" Value="CountUnit" />
+                                <asp:ListItem Text="规格型号" Value="Model" />
+                                <asp:ListItem Text="销售数量" Value="StockPoint" />
+                                <asp:ListItem Text="单价" Value="SingleMoney" />
+                                <asp:ListItem Text="销售总金额" Value="SellOrderMx.Allmoney" />
+                                <asp:ListItem Text="对应出库单" Value="title" />
+                            </asp:DropDownList>
+                        </font></td>
 						<TD style="WIDTH: 93px"><asp:TextBox id="GoodsName" runat="server" Width="88px"></asp:TextBox></TD>
+                        
+
 						<TD style="WIDTH: 61px"><FONT face="宋体">开始时间：</FONT></TD>
 						<TD style="WIDTH: 111px"><asp:TextBox id="Starttime" runat="server" Width="80px" ></asp:TextBox>
 							<script>SetNeed('Starttime')</script>

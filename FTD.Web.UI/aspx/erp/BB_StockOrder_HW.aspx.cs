@@ -24,18 +24,19 @@ namespace qpsmartweb_jxc
 		protected System.Web.UI.WebControls.TextBox GoodsName;
 		protected System.Web.UI.WebControls.DataGrid Datagrid2;
 		protected System.Web.UI.WebControls.DropDownList Stocktype;
-		public static decimal  allmoney;
+        protected System.Web.UI.WebControls.DropDownList ddl;
+        public static decimal  allmoney;
 		public string CreateMidSql()
 		{
 			string MidSql = string.Empty;
 			
-			if (this.GoodsName.Text.Trim() != "")
-			{
-				MidSql=MidSql+" and StockOrderMx.GoodsName like '%"+this.GoodsName.Text.Trim()+"%'";
-			}
+            if (ddl.SelectedValue.ToString() != "")
+            {
+                MidSql = "and {0} like '%{1}%'";
+                MidSql = string.Format(MidSql, ddl.SelectedValue.ToString(), GoodsName.Text.Trim());
+            }
 
-
-			if (this.Stocktype.SelectedValue.Trim() != "----")
+            if (this.Stocktype.SelectedValue.Trim() != "----")
 			{
 				MidSql=MidSql+" and StockOrderMx.Stocktype ='"+this.Stocktype.SelectedValue.Trim()+"'";
 			}
@@ -61,12 +62,12 @@ namespace qpsmartweb_jxc
 			}
 			if(Request.QueryString["str"]!=null)
 			{
-				string SQL_GetList_xs    =  "select StockOrderMx.* ,StockOrder.title from StockOrderMx,StockOrder where  StockOrderMx.Keyfile=StockOrder.number "+Server.UrlDecode(Request.QueryString["str"])+" ";
+				string SQL_GetList_xs    =  "select StockOrderMx.* ,StockOrder.title from StockOrderMx,StockOrder where  StockOrderMx.Keyfile=StockOrder.number "+Request.QueryString["str"]+" ";
 
 				Datagrid2.DataSource   = List.GetGrid_Pages(SQL_GetList_xs,"id");
 				Datagrid2.DataBind();
 
-				string    SQL_money_     =  " SELECT SUM(StockOrderMx.Allmoney) AS "+"sum"+"  from StockOrderMx ,StockOrder  where   StockOrderMx.Keyfile=StockOrder.number  "+Server.UrlDecode(Request.QueryString["str"])+" ";
+				string    SQL_money_     =  " SELECT SUM(StockOrderMx.Allmoney) AS "+"sum"+"  from StockOrderMx ,StockOrder  where   StockOrderMx.Keyfile=StockOrder.number  "+Request.QueryString["str"]+" ";
 				OleDbDataReader NewReader_money = List.GetList(SQL_money_);
 				if(NewReader_money.Read())
 				{
@@ -158,7 +159,7 @@ namespace qpsmartweb_jxc
 
 		private void ImageButton2_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 		{
-			Response.Redirect("BB_StockOrder_HW.aspx?str="+CreateMidSql()+"");
+			Response.Redirect("BB_StockOrder_HW.aspx?str="+Server.UrlEncode(CreateMidSql()+""));
 		}
 
 

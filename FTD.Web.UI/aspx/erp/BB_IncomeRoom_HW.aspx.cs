@@ -23,22 +23,21 @@ namespace qpsmartweb_jxc
 		Db List=new Db();
 		protected System.Web.UI.WebControls.TextBox GoodsName;
 		protected System.Web.UI.WebControls.DataGrid Datagrid2;
-		protected System.Web.UI.WebControls.DropDownList Stocktype;
+		protected System.Web.UI.WebControls.DropDownList ddl;
 		public static decimal  allmoney;
 		public string CreateMidSql()
 		{
 			string MidSql = string.Empty;
-			
-			if (this.GoodsName.Text.Trim() != "")
-			{
-				MidSql=MidSql+" and IncomeRoomMx.GoodsName like '%"+this.GoodsName.Text.Trim()+"%'";
-			}
+            if (ddl.SelectedValue.ToString() != "")
+            {
+                MidSql = "and {0} like '%{1}%'";
+                MidSql = string.Format(MidSql, ddl.SelectedValue.ToString(), GoodsName.Text.Trim());
+            }
 
 
 
 
-	
-			if (this.Starttime.Text.Trim() != "" && this.Endtime.Text.Trim() != "")
+            if (this.Starttime.Text.Trim() != "" && this.Endtime.Text.Trim() != "")
 			{
 				MidSql=MidSql+" and (IncomeRoomMx.Nowtimes between '"+this.Starttime.Text+"' and  '"+this.Endtime.Text+"' or convert(char(10),cast(IncomeRoomMx.Nowtimes as datetime),120)=convert(char(10),cast('"+this.Starttime.Text+"' as datetime),120) or convert(char(10),cast(IncomeRoomMx.Nowtimes as datetime),120)=convert(char(10),cast('"+this.Endtime.Text+"' as datetime),120)) ";
 			}	
@@ -71,7 +70,7 @@ namespace qpsmartweb_jxc
                     " ,max(IncomeRoomMx.[Nowtimes]) as Nowtimes  " +
 "  from IncomeRoomMx "+
 "where 1=1 "+
- Server.UrlDecode(Request.QueryString["str"])+" " +
+  Request.QueryString["str"] +" " +
  "group by GoodsName,StockPoint";
 
 				Datagrid2.DataSource   = List.GetGrid_Pages(SQL_GetList_xs,"id");
@@ -130,8 +129,8 @@ namespace qpsmartweb_jxc
 
 		private void ImageButton2_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 		{
-			Response.Redirect("BB_IncomeRoom_HW.aspx?str="+CreateMidSql()+"");
-		}
+			Response.Redirect("BB_IncomeRoom_HW.aspx?str=" + Server.UrlEncode(CreateMidSql() + ""));
+        }
 
 
 

@@ -55,7 +55,16 @@
 			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 				<TBODY>
 					<TR>
-						<TD style="WIDTH: 44px"><FONT face="宋体">商品：</FONT></TD>
+                        <td style="width: 44px"><font face="宋体">
+                            <asp:DropDownList runat="server" ID="ddl">
+                                <asp:ListItem Text="商品名称" Value="GoodsName" />
+                                <asp:ListItem Text="计量单位" Value="CountUnit" />
+                                <asp:ListItem Text="规格型号" Value="Model" />
+                                <asp:ListItem Text="采购数量" Value="StockPoint" />
+                                <asp:ListItem Text="单价" Value="SingleMoney" />
+                                <asp:ListItem Text="采购总金额" Value="StockOrderMx.Allmoney" />
+                                <asp:ListItem Text="对应订单" Value="title" />
+                            </asp:DropDownList></font></td>
 						<TD style="WIDTH: 93px"><asp:TextBox id="GoodsName" runat="server" Width="88px"></asp:TextBox></TD>
 						<TD style="WIDTH: 65px"><FONT face="宋体">订购方式：</FONT></TD>
 						<TD style="WIDTH: 118px">

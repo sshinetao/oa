@@ -40,7 +40,13 @@
 			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 				<TBODY>
 					<TR>
-						<TD style="WIDTH: 44px"><FONT face="宋体">商品：</FONT></TD>
+						<TD style="WIDTH: 44px"><FONT face="宋体">
+                             <asp:DropDownList runat="server" ID="ddl">
+                                <asp:ListItem Text="商品名称" Value="GoodsName" />
+                                <asp:ListItem Text="来源村" Value="Model" />
+                                <asp:ListItem Text="销售数量" Value="StockPoint" />
+                            </asp:DropDownList>
+						                        </FONT></TD>
 						<TD style="WIDTH: 93px"><asp:TextBox id="GoodsName" runat="server" Width="88px"></asp:TextBox></TD>
 						<TD style="WIDTH: 61px"><FONT face="宋体">开始时间：</FONT></TD>
 						<TD style="WIDTH: 111px"><asp:TextBox id="Starttime" runat="server" Width="80px" ></asp:TextBox>
